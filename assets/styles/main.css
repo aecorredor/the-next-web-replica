@@ -1,0 +1,351 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(75, 75, 74);
+}
+
+.container {
+  /* 1440px / 16px = 90em */
+  max-width: 90em;
+  background-color: rgb(225, 193, 227);
+  overflow: hidden;
+}
+
+.nav-bar {
+  position: fixed;
+  /* 1440px / 1440px = 1 (equivalent to 100%) */
+  width: 100%;
+  height: 50px;
+  background-color: rgb(207, 199, 197);
+}
+
+.small-nav {
+  display: none;
+  position: fixed;
+  /* 1440px / 1440px = 1 (equivalent to 100%) */
+  width: 100%;
+  height: 50px;
+  background-color: rgb(240, 122, 92);
+}
+
+/* ----------------------------------------------------------------------------
+
+MAIN CONTENT
+
+------------------------------------------------------------------------------*/
+
+.main-content {
+  /* 1430px / 1440px following percentages are calculated the same way */
+  width: 99.30555555555556%;
+  margin: 0 auto;
+  margin-top: 60px;
+  background-color: rgb(181, 126, 89);
+  overflow: hidden;
+}
+
+.main-1 {
+  width: 66.4%;
+  height: 500px;
+  background-color: rgb(138, 233, 217);
+  float: left;
+}
+
+.main-2 {
+  width: 33%;
+  height: 246px;
+  background-color: rgb(165, 246, 161);
+  float: right;
+}
+
+.main-2:last-of-type {
+  margin-top: 8px;
+}
+
+/* ----------------------------------------------------------------------------
+
+LATEST NEWS
+
+------------------------------------------------------------------------------*/
+
+.latest-news {
+  width: 76.38888888888889%;
+  margin: 2% auto 0 auto;
+  background-color: rgb(152, 116, 221);
+}
+
+.news-container {
+  width: 100%;
+  background-color: rgb(116, 221, 208);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news {
+  width: 23.7%;
+  height: 250px;
+  margin-bottom: 2%;
+  background-color: rgb(194, 72, 141);
+}
+
+/* ----------------------------------------------------------------------------
+
+CATEGORIES
+
+------------------------------------------------------------------------------*/
+
+.categories {
+  width: 76.38888888888889%;
+  margin: 2% auto 0 auto;
+  background-color: rgb(254, 205, 123);
+}
+
+.categ-container {
+  width: 100%;
+  background-color: rgb(255, 97, 75);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.category {
+  width: 32%;
+  height: 500px;
+  margin-bottom: 2%;
+  background-color: rgb(90, 187, 182);
+}
+
+/* ----------------------------------------------------------------------------
+
+LATEST DEALS
+
+------------------------------------------------------------------------------*/
+
+.latest-deals {
+  width: 76.38888888888889%;
+  margin: 2% auto 0 auto;
+  background-color: rgb(254, 205, 123);
+}
+
+.deals-container {
+  width: 100%;
+  background-color: rgb(255, 97, 75);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.deal {
+  width: 24%;
+  height: 250px;
+  margin-bottom: 2%;
+  background-color: rgb(90, 187, 182);
+}
+
+/* ----------------------------------------------------------------------------
+
+QUOTE
+
+------------------------------------------------------------------------------*/
+
+.quote {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(154, 154, 154);
+}
+
+/* ----------------------------------------------------------------------------
+
+FOOTER
+
+------------------------------------------------------------------------------*/
+
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(24, 24, 24);
+}
+
+/* ----------------------------------------------------------------------------
+
+MEDIA QUERIES ( <= 1024px)
+
+------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+  .main-1 {
+    width: 66.4%;
+    height: 350px;
+    background-color: rgb(138, 233, 217);
+    float: left;
+  }
+
+  .main-2 {
+    width: 33%;
+    height: 170px;
+    background-color: rgb(165, 246, 161);
+    float: right;
+  }
+
+  .main-2:last-of-type {
+    margin-top: 8px;
+  }
+
+  .latest-news {
+    width: 97%;
+    background-color: rgb(152, 116, 221);
+  }
+
+  .news {
+    width: 32%;
+    height: 250px;
+  }
+
+  .news-container :last-child {
+    margin-right: 34%;
+  }
+
+  .categories {
+    width: 97%;
+    background-color: rgb(254, 205, 123);
+  }
+
+  .category {
+    width: 49%;
+    height: 500px;
+    margin-bottom: 2%;
+    background-color: rgb(90, 187, 182);
+  }
+
+  .categ-container :last-child {
+    margin-top: 2%;
+  }
+
+  .latest-deals {
+    width: 97%;
+    background-color: rgb(254, 205, 123);
+  }
+
+  .deal {
+    width: 32%;
+    height: 250px;
+    margin-bottom: 2%;
+    background-color: rgb(90, 187, 182);
+  }
+
+  .deals-container :last-child {
+    margin-right: 34%;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+
+MEDIA QUERIES ( <= 768px)
+
+------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+
+  .nav-bar {
+    display: none;
+  }
+
+  .small-nav {
+    display: block;
+  }
+
+  .main-content {
+    /* 1430px / 1440px following percentages are calculated the same way */
+    width: 97%;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-color: rgb(181, 126, 89);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .main-1 {
+    width: 100%;
+    height: 32.5%;
+    background-color: rgb(138, 233, 217);
+  }
+
+  .main-2 {
+    width: 100%;
+    height: 32.5%;
+    background-color: rgb(165, 246, 161);
+  }
+
+  .main-2:last-of-type {
+    margin: 0;
+  }
+
+  .latest-news {
+    width: 97%;
+    margin: 2% auto 0 auto;
+    background-color: rgb(152, 116, 221);
+  }
+
+  .news-container {
+    width: 100%;
+    background-color: rgb(116, 221, 208);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+  }
+
+  .news {
+    width: 100%;
+    height: 100px;
+  }
+
+  .categories {
+    width: 97%%;
+    margin: 2% auto 0 auto;
+    background-color: rgb(254, 205, 123);
+  }
+
+  .categ-container {
+    width: 100%;
+    background-color: rgb(255, 97, 75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .category {
+    width: 100%;
+    height: 800px;
+    background-color: rgb(90, 187, 182);
+  }
+
+  .last {
+    margin-top: 0 !important;
+  }
+
+  .latest-deals {
+    width: 97%;
+    margin: 2% auto 0 auto;
+    background-color: rgb(254, 205, 123);
+  }
+
+  .deals-container {
+    width: 100%;
+    background-color: rgb(255, 97, 75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .deal {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(90, 187, 182);
+  }
+}

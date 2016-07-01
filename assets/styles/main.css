@@ -1,3 +1,9 @@
+/* ----------------------------------------------------------------------------
+
+GENERAL
+
+------------------------------------------------------------------------------*/
+
 *,
 *::before,
 *::after {
@@ -6,21 +12,24 @@
 
 body {
   background-color: rgb(75, 75, 74);
+  font-size: 100%;
 }
 
 .container {
-  /* 1440px / 16px = 90em */
-  max-width: 90em;
+  max-width: 100%;
   background-color: rgb(225, 193, 227);
   overflow: hidden;
 }
 
 .nav-bar {
   position: fixed;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   /* 1440px / 1440px = 1 (equivalent to 100%) */
   width: 100%;
   height: 50px;
-  background-color: rgb(207, 199, 197);
+  background-color: #fff;
 }
 
 .small-nav {
@@ -34,11 +43,24 @@ body {
 
 /* ----------------------------------------------------------------------------
 
+FONTS
+
+------------------------------------------------------------------------------*/
+
+@font-face {
+  font-family: Shentox;
+  src: url("../fonts/Shentox-Regular.otf");
+}
+
+
+/* ----------------------------------------------------------------------------
+
 MAIN CONTENT
 
 ------------------------------------------------------------------------------*/
 
 .main-content {
+  position: relative;
   /* 1430px / 1440px following percentages are calculated the same way */
   width: 99.30555555555556%;
   margin: 0 auto;
@@ -48,14 +70,16 @@ MAIN CONTENT
 }
 
 .main-1 {
-  width: 66.4%;
+  position: relative;
+  width: 49.5%;
   height: 500px;
-  background-color: rgb(138, 233, 217);
+  background-color: rgb(152, 237, 85);
   float: left;
 }
 
 .main-2 {
-  width: 33%;
+  position: relative;
+  width: 50%;
   height: 246px;
   background-color: rgb(165, 246, 161);
   float: right;
@@ -178,14 +202,14 @@ MEDIA QUERIES ( <= 1024px)
 
 @media screen and (max-width: 1024px) {
   .main-1 {
-    width: 66.4%;
+    width: 49.5%;
     height: 350px;
     background-color: rgb(138, 233, 217);
     float: left;
   }
 
   .main-2 {
-    width: 33%;
+    width: 50%;
     height: 170px;
     background-color: rgb(165, 246, 161);
     float: right;
@@ -348,4 +372,61 @@ MEDIA QUERIES ( <= 768px)
     height: 80px;
     background-color: rgb(90, 187, 182);
   }
+}
+
+/* ----------------------------------------------------------------------------
+
+CONTENT (1024px+)
+
+------------------------------------------------------------------------------*/
+
+.logo {
+  width: 108px;
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 12px;
+  background: linear-gradient(to bottom right,#c09,#f42 85%);
+}
+
+.links {
+  font-family: Shentox,sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9375em;
+}
+
+.links a {
+  text-decoration: none;
+  color: #AAA;
+  padding-right: 12px;
+}
+
+.links :hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.main-article-info {
+  position: absolute;
+  left: 2%;
+  bottom: 4%;
+}
+
+.main-article-info h1{
+  font-size: 3em;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.article-info {
+  position: absolute;
+  left: 2%;
+  bottom: 6%;
+}
+
+.article-info h2 {
+  font-size: 2em;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
